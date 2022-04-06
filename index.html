@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+ <head>
+	<meta content=" text/html;charset=utf -8" http-equiv="Content-Type">
+	<meta content ="utf-8"http-equiv="encoding">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+ </head >
+ 
+ <body>
+	<input class="message" v-model="message" placeholder="Enter text and press enter" onkeydown="makeShannonFanoTree(this)"/>
+	<div id="uncomprMsg" ></div> </br></br>
+
+	<div class="output-empty" v-if="message == ''">Shannon-Fano codes: </div>
+	<div id="chars" ></div> 
+	<div id="freq" ></div></br></br>
+	
+	<div class="output-empty" v-if="message == ''"> Compression tree </div>
+	
+	<script src="ShannonFanoTree.js"></script>
+	<script src="ShannonFanoCoding.js"></script>
+ </body>
+</html>
